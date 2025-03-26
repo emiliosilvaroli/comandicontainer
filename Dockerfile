@@ -6,4 +6,4 @@ COPY contatore.py .
 RUN pip install flask
 
 EXPOSE 80
-CMD ["python", "contatatore.py"]
+CMD ["python", "contatore.py"]
