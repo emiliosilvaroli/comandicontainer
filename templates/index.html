@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Contatore in Tempo Reale</title>
+</head>
+<body>
+    <h1>Contatore: <span id="counter">0</span> secondi</h1>
+
+    <script>
+        const eventSource = new EventSource("/events");
+        eventSource.onmessage = function(event) {
+            document.getElementById("counter").textContent = event.data;
+        };
+    </script>
+</body>
+</html>
